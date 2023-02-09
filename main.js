@@ -1,17 +1,35 @@
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 const express = require("express");
 const app = express();
-var getIP = require('ipware')().get_ip;
+const getIP = require('ipware')().get_ip;
 
-const DEFAULT_OFFER = 'https://google.com';
+const DEFAULT_OFFER = 'http://liporeductlow.xcartpro.com/r11/?off=76KRijR5&lnk=57044&m=401816d786ef80b';
 
-const UKRAINE_OFFER = 'https://ok.ru';
+const UKRAINE_OFFER = 'http://biovittoriaa.xcartpro.com/r10/?off=YPbpC8Nn&lnk=64990&m=401816d786ef80b';
 
-const BELARUS_KZT_OFFER = 'https://vk.com';
+const BELARUS_KZT_OFFER = 'http://leptigenmeridiandiet139.xcartpro.com/r3/?off=2dKPUybj&lnk=31244&m=401816d786ef80b';
 
-const RUSSIA_OFFER = 'https://ok.ru';
+const MOLDOVA_OFFER = 'http://taliaaa.xcartpro.com/m2/?off=zaXPtEl6&lnk=17208&m=401816d786ef80b';
 
-app.use("/", function (request, response, next) {
+const RUSSIA_OFFER = 'http://liporeductlow.xcartpro.com/r11/?off=76KRijR5&lnk=57044&m=401816d786ef80b';
+
+const GEORGIA_OFFER = 'http://welltonica.xcartpro.com/r1/?off=oYbrsqzk&lnk=61689&m=401816d786ef80b';
+
+const ARMENIA_OFFER = 'http://ketodietacaps.xcartpro.com/r1/?off=vvD4caav&lnk=41494&m=401816d786ef80b';
+
+const LATVIA_OFFER = 'http://ketoguru26.xcartpro.com/r7/?off=WnbrtmMX&lnk=67521&m=401816d786ef80b';
+
+const GERMANY_OFFER = 'http://magicoa.xcartpro.com/r48/?off=76KRirdp&lnk=67113&m=401816d786ef80b';
+
+const POLAND_OFFER = 'http://magicoa.xcartpro.com/r39/?off=76KRirdp&lnk=67008&m=401816d786ef80b';
+
+const ROMANIA_OFFER = 'http://magicoa.xcartpro.com/r15/?off=76KRirdp&lnk=66984&m=401816d786ef80b';
+
+const KYRGYZSTAN_OFFER = 'http://detoxiccc.xcartpro.com/r5/?off=jDb0TOm5&lnk=65941&m=401816d786ef80b';
+
+const LITHUANIA_OFFER = 'http://ketoguru26.xcartpro.com/r37/?off=WnbrtmMX&lnk=67551&m=401816d786ef80b';
+
+app.use("*", function (request, response, next) {
     setTimeout(() => {
         try {
             const ip = getIP(request).clientIp;
@@ -35,8 +53,35 @@ app.use("/", function (request, response, next) {
                         case 'kazakhstan':
                             response.redirect(BELARUS_KZT_OFFER);
                             break;
+                        case 'moldova':
+                            response.redirect(MOLDOVA_OFFER);
+                            break;
                         case 'russia':
                             response.redirect(RUSSIA_OFFER);
+                            break;
+                        case 'georgia':
+                            response.redirect(GEORGIA_OFFER);
+                            break;
+                        case 'armenia':
+                            response.redirect(ARMENIA_OFFER);
+                            break;
+                        case 'latvia':
+                            response.redirect(LATVIA_OFFER);
+                            break;
+                        case 'germany':
+                            response.redirect(GERMANY_OFFER);
+                            break;
+                        case 'poland':
+                            response.redirect(POLAND_OFFER);
+                            break;
+                        case 'romania':
+                            response.redirect(ROMANIA_OFFER);
+                            break;
+                        case 'kyrgyzstan':
+                            response.redirect(KYRGYZSTAN_OFFER);
+                            break;
+                        case 'lithuania':
+                            response.redirect(LITHUANIA_OFFER);
                             break;
                         default: response.redirect(DEFAULT_OFFER);
                     }
@@ -55,4 +100,4 @@ app.use("/", function (request, response, next) {
     }, 1)
 });
 
-app.listen(8080);
+app.listen(8083);
