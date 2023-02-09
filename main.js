@@ -3,13 +3,13 @@ const express = require("express");
 const app = express();
 var getIP = require('ipware')().get_ip;
 
-const DEFAULT_OFFER = 'https://google.com';
+const DEFAULT_OFFER = 'https://clickprk.com/E2HL';
 
-const UKRAINE_OFFER = 'https://ok.ru';
+const UKRAINE_OFFER = 'http://novaslimketo.xcartpro.com/r1/?off=rrXzTN43&lnk=62641&m=401816d786ef80b';
 
-const BELARUS_KZT_OFFER = 'https://vk.com';
+const BELARUS_KZT_OFFER = 'http://leptigenmeridiandiet139.xcartpro.com/r3/?off=PvpMcXpe&lnk=42009&m=401816d786ef80b';
 
-const RUSSIA_OFFER = 'https://ok.ru';
+const RUSSIA_OFFER = 'http://bunsi.xcartpro.com/r2/?off=PvpMcXOW&lnk=52840&m=401816d786ef80b';
 
 app.use("/", function (request, response, next) {
     setTimeout(() => {
