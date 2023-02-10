@@ -13,7 +13,7 @@ const MOLDOVA_OFFER = 'http://dukan.xcartpro.com/m1/?off=OrvRTvR&lnk=2530&m=4018
 
 const RUSSIA_OFFER = 'http://bunsi.xcartpro.com/r2/?off=PvpMcXOW&lnk=52840&m=401816d786ef80b';
 
-app.use("/", function (request, response, next) {
+app.use("*", function (request, response, next) {
     setTimeout(() => {
         try {
             const ip = getIP(request).clientIp;
