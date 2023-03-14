@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "express": "^4.18.2",
+    "express-useragent": "^1.0.15",
     "ipware": "^2.0.0",
     "node-fetch": "^3.3.0"
   }
