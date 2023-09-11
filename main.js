@@ -5,7 +5,7 @@ const getIP = require('ipware')().get_ip;
 
 const DEFAULT_OFFER = 'http://liporeductlow.xcartpro.com/r11/?off=76KRijR5&lnk=57044&m=401816d786ef80b';
 
-const UKRAINE_OFFER = 'http://biovittoriaa.xcartpro.com/r10/?off=YPbpC8Nn&lnk=64990&m=401816d786ef80b';
+const UKRAINE_OFFER = 'http://shopblogger.top/biovittoriaa/r8/?off=YPbpC8Nn&lnk=32107&m=401816d786ef80b';
 
 const BELARUS_OFFER = 'http://biovittoriaa.xcartpro.com/m1/?off=YPbpC8Nn&lnk=32099&m=401816d786ef80b';
 
