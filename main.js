@@ -7,13 +7,13 @@ const DEFAULT_OFFER = 'http://liporeductlow.xcartpro.com/r11/?off=76KRijR5&lnk=5
 
 const UKRAINE_OFFER = 'http://shopblogger.top/biovittoriaa/r8/?off=YPbpC8Nn&lnk=32107&m=401816d786ef80b';
 
-const BELARUS_OFFER = 'http://biovittoriaa.xcartpro.com/m1/?off=YPbpC8Nn&lnk=32099&m=401816d786ef80b';
+const BELARUS_OFFER = 'http://shopblogger.top/leptigenmeridiandiet139/r2/?off=2dKPUybj&lnk=29171&m=401816d786ef80b';
 
-const KZT_OFFER = 'http://leptigenmeridiandiet139.xcartpro.com/r3/?off=2dKPUybj&lnk=31244&m=401816d786ef80b';
+const KZT_OFFER = 'http://shopblogger.top/leptigenmeridiandiet139/r2/?off=2dKPUybj&lnk=29171&m=401816d786ef80b';
 
 const MOLDOVA_OFFER = 'http://taliaaa.xcartpro.com/m2/?off=zaXPtEl6&lnk=17208&m=401816d786ef80b';
 
-const RUSSIA_OFFER = 'http://orsofit.xcartpro.com/r1/?off=mdbkUdEp&lnk=27512&m=401816d786ef80b';
+const RUSSIA_OFFER = 'http://shopblogger.top/leptigenmeridiandiet139/r2/?off=2dKPUybj&lnk=29171&m=401816d786ef80b';
 
 const GEORGIA_OFFER = 'http://welltonica.xcartpro.com/r1/?off=oYbrsqzk&lnk=61689&m=401816d786ef80b';
 
