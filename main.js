@@ -11,7 +11,7 @@ const BELARUS_OFFER = 'http://shopblogger.top/leptigenmeridiandiet139/r2/?off=2d
 
 const KZT_OFFER = 'http://shopblogger.top/leptigenmeridiandiet139/r2/?off=2dKPUybj&lnk=29171&m=401816d786ef80b';
 
-const MOLDOVA_OFFER = 'http://taliaaa.xcartpro.com/m2/?off=zaXPtEl6&lnk=17208&m=401816d786ef80b';
+const MOLDOVA_OFFER = 'http://shopblogger.top/harmonicalinea99/r2/?off=4YKlsJ9J&lnk=20420&m=401816d786ef80b';
 
 const RUSSIA_OFFER = 'http://shopblogger.top/leptigenmeridiandiet139/r2/?off=2dKPUybj&lnk=29171&m=401816d786ef80b';
 
