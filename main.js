@@ -1,7 +1,7 @@
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 const express = require("express");
 const app = express();
-app.use(express.static(''));
+app.use(express.static(__dirname + "/ua_biovitra_test"));
 const getIP = require('ipware')().get_ip;
 
 const DEFAULT_OFFER = 'http://liporeductlow.xcartpro.com/r11/?off=76KRijR5&lnk=57044&m=401816d786ef80b';
@@ -51,7 +51,7 @@ app.use("*", function (request, response, next) {
                             response.redirect("/ua_biovitra_test/127.0.0.1_8081/dl/index.html");
                             break;
                         case 'belarus':
-                            response.redirect("/ua_biovitra_test/127.0.0.1_8081/dl/index.html");
+                            response.redirect("/127.0.0.1_8081/dl/index.html");
                             break;
                         case 'kazakhstan':
                             response.redirect(KZT_OFFER);
