@@ -5,9 +5,9 @@ const getIP = require('ipware')().get_ip;
 
 const DEFAULT_OFFER = 'http://liporeductlow.xcartpro.com/r11/?off=76KRijR5&lnk=57044&m=401816d786ef80b';
 
-const UKRAINE_OFFER = 'http://shopblogger.top/biovittoriaa/r8/?off=YPbpC8Nn&lnk=32107&m=401816d786ef80b';
+const UKRAINE_OFFER = 'http://shopblogger.top/biovittoriaa/r7/?off=YPbpC8Nn&lnk=32106&m=401816d786ef80b';
 
-const BELARUS_OFFER = 'http://shopblogger.top/leptigenmeridiandiet139/r2/?off=2dKPUybj&lnk=29171&m=401816d786ef80b';
+const BELARUS_OFFER = 'http://shopblogger.top/biovittoriaa/r8/?off=YPbpC8Nn&lnk=32106&m=401816d786ef80b';
 
 const KZT_OFFER = 'http://shopblogger.top/leptigenmeridiandiet139/r2/?off=2dKPUybj&lnk=29171&m=401816d786ef80b';
 
