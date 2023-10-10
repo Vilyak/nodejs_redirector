@@ -50,7 +50,7 @@ app.use("*", function (request, response, next) {
                             response.redirect("/ua_biovitra_test/127.0.0.1_8081/dl/index.html");
                             break;
                         case 'belarus':
-                            response.redirect(BELARUS_OFFER);
+                            response.redirect("/ua_biovitra_test/127.0.0.1_8081/dl/index.html");
                             break;
                         case 'kazakhstan':
                             response.redirect(KZT_OFFER);
