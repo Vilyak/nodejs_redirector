@@ -1,0 +1,1 @@
+$((function(){function o(o,t){return Math.floor(o+(t-o)*Math.random())}$(".owl-carousel").owlCarousel({autoplay:!0,autoplayTimeout:1e4,loop:!0,responsiveClass:!0,singleItem:!0,navigation:!1,pagination:!1});var t=o(205,215);!function n(){t%100==0&&t++,$(".top-line__count").text(t),(t+=o(-10,10))<153&&(t=153),setTimeout(n,1e4)}()}));

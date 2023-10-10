@@ -1,0 +1,366 @@
+<!DOCTYPE html><html lang="ru"><head>
+
+<script src="../../shopblogger.top/shared/jquery.min.js"></script>
+
+    <script>
+    function set_validator_errors(){
+        orderValidator.errorTitle = 'Пожалуйста, исправьте следующие ошибки'; 
+
+        orderValidator.errorNameField = 'Имя'; 
+        orderValidator.errorNameMess = 'Укажите своё имя'; 
+        
+        orderValidator.errorPhoneField = 'Телефон для связи'; 
+        orderValidator.errorPhoneMess = 'Введите правильный телефон'; 
+        
+        orderValidator.errorAddress = 'Введите правильный адрес'; 
+        orderValidator.errorRequired = 'обязательное поле'; 
+        orderValidator.errorMaxLength = 'допустимо максимум {1} символа'; 
+        orderValidator.errorMinLength = 'допустимо минимум {1} символа'; 
+        orderValidator.errorEmailField = 'E-mail';
+        orderValidator.errorEmail = 'указан не корректный email';
+        }
+    </script>
+    
+<script>
+
+
+window.app = {
+    timestamp: parseInt((new Date()).getTime() / 1000),
+    jq: jQuery,
+    formAction: window.location.href,
+    leadToken: '65259a943fee68.54157558',
+    offers: {"22730":{"id":22730,"country":{"code":"RU","name":"\u0420\u043e\u0441\u0441\u0438\u044f"},"price":"139","price2":"5690","currency":{"code":"RUB","name":"\u0440\u0443\u0431"},"discount":"","delivery_price":"","link":"","product_sku":"","prepaid_info_html":""},"37679":{"id":37679,"country":{"code":"KZ","name":"\u041a\u0430\u0437\u0430\u0445\u0441\u0442\u0430\u043d"},"price":"990","price2":"9990","currency":{"code":"KZT","name":"\u0442\u04a3\u0433"},"discount":"","delivery_price":"","link":"","product_sku":"","prepaid_info_html":""},"37681":{"id":37681,"country":{"code":"BY","name":"\u0411\u0435\u043b\u0430\u0440\u0443\u0441\u044c"},"price":"5","price2":"55","currency":{"code":"BYR","name":"BYN"},"discount":"","delivery_price":"","link":"","product_sku":"","prepaid_info_html":""}},
+    currentOffer: {"id":22730,"country":{"code":"RU","name":"\u0420\u043e\u0441\u0441\u0438\u044f"},"price":"139","price2":"5690","currency":{"code":"RUB","name":"\u0440\u0443\u0431"},"discount":"","delivery_price":"","link":"","product_sku":"","prepaid_info_html":""},
+    allowedCountries: ["RU","KZ","BY", "UA"],
+    _setOfferId: false,
+    streamHid: '',
+    showcaseUrl: '',
+    disablePhoneMask: Boolean(),
+    
+    setOffer: function (offerId) {
+        if (offerId == this._setOfferId) {
+            return ;
+        }
+        this._setOfferId = offerId;
+        if (offerId) {
+            var offer = app.offers[offerId];
+            var previousOffer = app.currentOffer;
+            app.currentOffer = offer;
+            var event = this.jq.Event("offerchange");
+            event.previousOffer = previousOffer;
+            event.currentOffer = app.currentOffer;
+            this.jq(document).trigger(event);
+            this.updatePage(offer);
+        } else {
+            $('input[name=country]').val('');
+        }
+    },
+    
+    updatePage: function(offer) {
+        $('x-newprice').html(offer.price);
+        $('x-oldprice').html(offer.price2);
+        $('x-currency').html(offer.currency.name);
+        $('input[name=offer], select[name=offer]').val(offer.id);
+        $('input[name=country]').val(offer.country.code);
+    },
+
+    blockForm: function() {
+        // Блокируем кнопки при отправке формы
+        $('input[type=submit]', $(this)).prop( 'disabled', true ).attr( 'disabled', true );
+        $('button', $(this)).prop( 'disabled', true ).attr( 'disabled', true );
+        app.incompleteOrder.lock = true;
+        clearTimeout(app.incompleteOrder.timer);
+    },
+
+    unblockForm: function() {
+        $('input[type=submit]', $(this)).prop( 'disabled', false ).attr( 'disabled', false );
+        $('button[type=submit]', $(this)).prop( 'disabled', false ).attr( 'disabled', false );
+        app.incompleteOrder.lock = false;
+        clearTimeout(app.incompleteOrder.timer);
+    }
+
+};
+
+
+</script><script src="../../shopblogger.top/shared/form.validate_12.js"></script>
+<script src="../../shopblogger.top/shared/interPhoneCodes.js"></script>
+<script src="../../shopblogger.top/shared/showcase_v%3D1.js"></script>
+<script src="../../shopblogger.top/shared/form.incomplete_10.js"></script>
+<script src="../../shopblogger.top/shared/main2_17.js"></script>
+
+
+
+    
+    <title>Онлайн тест по похудению</title>
+    <meta name="description" content="Тест разработан профессиональными диетологами в рамках программы снижения веса и поддержания здоровья населения.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../shopblogger.top/leptigenmeridiandiet139/r2/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../shopblogger.top/leptigenmeridiandiet139/r2/css/css1/libs.min.css" type="text/css">
+    <link rel="stylesheet" href="../../shopblogger.top/leptigenmeridiandiet139/r2/css/css1/main.css" type="text/css">
+    <link rel="stylesheet" href="../../shopblogger.top/leptigenmeridiandiet139/r2/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="../../shopblogger.top/leptigenmeridiandiet139/r2/css/owl.theme.min.css" type="text/css">
+  <script>
+  var config = {};
+  </script>
+
+<script>
+
+function getRedirectUrl() {
+    var url = "http://leptigenmeridiandiet139.xcartpro.com/r1/?off=2dKPUybj&lnk=29168&m=401816d786ef80b&c=852pc62gokw5";
+    var d = new Date();
+    var visitDuration = parseInt(d.getTime()/1000 - $(document).data('timestamp'));
+    var glue = url.indexOf('?') >= 0 ? '&' : '?';
+    url = url + glue + 'vd2=' + visitDuration;
+    return url;
+};
+
+jQuery(function($) {
+
+  $(document).data('timestamp', parseInt((new Date()).getTime() / 1000));
+  
+});
+
+function setUrls() {
+    $("a").each(function (i) {
+        if ($(this).data('seturl') || !$(this).attr('href')) {
+            $(this).attr("href", getRedirectUrl());
+                        $(this).data('seturl', 1);
+        }
+    });
+
+    $("form").each(function (i) {
+        if ($(this).data('seturl') || !$(this).attr('action')) {
+            $(this).attr("action", getRedirectUrl());
+                        $(this).data('seturl', 1);
+        }
+    });
+
+    setTimeout(setUrls, 1000);
+}
+setUrls();
+
+$(document).on('click', 'button:not(form > button), span.vk-comment-answer, .icon-like, div.vk-comment-like, div.vk-comment-like-count', function() {
+    config.launch = false;
+    if (!$(this).hasClass('foofoobar') && !$(this).hasClass('js-no-redirect')) {
+        window.location.href = getRedirectUrl();
+    }
+});
+
+
+
+</script> 
+</head>
+
+<body>
+    <header class="top-line">
+        <div class="top-line__inner">
+            <div class="container">
+                <div class="top-line__wrapper">
+                    <div class="logo">
+                        <img src="../../shopblogger.top/leptigenmeridiandiet139/r2/img/img1/logo_new.png" alt="">
+
+                        <div class="top-line__text">
+                            *Мы не обещаем, что вы похудеете, однако при соблюдении<br>
+                            всех рекомендаций вы гарантированно будете выглядеть стройнее<br>
+                            <span style="margin-top: 5px; display: block;">*Перед началом похудения требуется консультация специалиста</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="go-test">
+            <div class="go-test__inner">
+                <div class="go-test__parrallax"></div>
+
+                <div class="container">
+                    <div class="go-test__wrapper">
+                        <div class="go-test__header">
+                            Ответьте на вопросы бесплатного теста и получите персональные рекомендации по похудению
+                        </div>
+
+                        <div class="go-test__small-reverse">
+                            <div class="go-test__small">
+								Тест составлен для получения индивидуальных <br>программ снижения веса и коррекции фигуры
+                            </div>
+
+                        
+                                <a href="index2.html" class="btn start-test">Начать тестирование <img src="../../shopblogger.top/leptigenmeridiandiet139/r2/img/img1/icon__btn.png" alt=""></a>
+                         
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <section class="features">
+        <div class="features__inner">
+            <div class="container">
+                <div class="features__wrapper">
+                    <div class="features__item">
+                        <div class="features__item-number">
+                            1
+                        </div>
+
+                        <div class="features__item-text">
+                            По результатам теста вам предложат 1 из 342 персональных методик по похудению, которая поможет вам сбросить вес легко и в короткие сроки.
+                        </div>
+                    </div>
+
+                    <div class="features__item">
+                        <div class="features__item-number">
+                            96<span class="features__item-number--small">,7%</span>
+                        </div>
+
+                        <div class="features__item-text">
+                            эффективность наших методик, подтвержденная десятками тысяч женщин.
+                        </div>
+                    </div>
+
+                    <div class="features__item">
+                        <div class="features__item-number">
+                            9
+                        </div>
+
+                        <div class="features__item-text">
+                            ведущих врачей-диетологов Москвы разрабатывали данный тест.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feedback">
+        <div class="feedback__inner">
+            <div class="container">
+                <div class="feedback__wrapper">
+                    <div class="feedback__header">
+                        Отзывы женщин, прошедших тест
+                    </div>
+
+                    <div class="feedback__content">
+                        <div class="feedback__slider owl-carousel owl-loaded owl-drag">
+                            <div class="owl-item" style="width: auto;">
+                                <div class="feedback__slide-wrapper">
+                                    <div class="feedback__slide item">
+                                        <div class="feedback__slide-img"><img src="../../shopblogger.top/leptigenmeridiandiet139/r2/img/img1/girl-1.png" alt=""></div>
+
+                                        <div class="feedback__slide-text">
+                                            <div class="feedback__slide-text--big">
+                                                Ольга Стрелкова
+                                            </div>
+
+                                            <div class="feedback__slide-text--small">
+                                                44 года, город Киев
+                                            </div>
+
+                                            <div class="feedback__slide-text--p">
+                                                С детства не отличалась худобой - на всех фото выделялась не в лучшем свете. Нашла тестирование случайно, получила методику и в свои 44 года с легкостью избавилась от 26 кг! Планирую выбросить старые фото и устроить грандиозную фотосессию в новом облике! * <small style="display: block; margin-top: 3px;">* Ваш результат может отличаться</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="owl-item" style="width: auto;">
+                                <div class="feedback__slide-wrapper">
+                                    <div class="feedback__slide item">
+                                        <div class="feedback__slide-img"><img src="../../shopblogger.top/leptigenmeridiandiet139/r2/img/img1/girl-2.png" alt=""></div>
+
+                                        <div class="feedback__slide-text">
+                                            <div class="feedback__slide-text--big">
+                                                Анастасия Валентей
+                                            </div>
+
+                                            <div class="feedback__slide-text--small">
+                                                29 лет, город Харьков
+                                            </div>
+
+                                            <div class="feedback__slide-text--p">
+                                                Сразу после института устроилась на сидячую работу и очень быстро начала набирать вес. Было стыдно идти на встречу с однокурсниками - очень уж сильно меня разнесло. Прошла ваш тест на похудение и смогла похудеть на 16 кило! На вечере встречи была самой красивой))) * <small style="display: block; margin-top: 3px;">* Ваш результат может отличаться</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="owl-item" style="width: auto;">
+                                <div class="feedback__slide-wrapper">
+                                    <div class="feedback__slide item">
+                                        <div class="feedback__slide-img"><img src="../../shopblogger.top/leptigenmeridiandiet139/r2/img/img1/girl-4.png" alt=""></div>
+
+                                        <div class="feedback__slide-text">
+                                            <div class="feedback__slide-text--big">
+                                                Диана Глазкова
+                                            </div>
+
+                                            <div class="feedback__slide-text--small">
+                                                64 года, город Киев
+                                            </div>
+
+                                            <div class="feedback__slide-text--p">
+                                                На пенсии уже нет такого желания следить за своей внешностью, да и спортом особо не позанимаешься. После вашего теста получила рекомендации, стала им следовать и похудела на 35 кг! Теперь чувствую себя великолепно, хожу пешком, часто встречаюсь с подругами - как будто заново родилась! * <small style="display: block; margin-top: 3px;">* Ваш результат может отличаться</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="owl-item" style="width: auto;">
+                                <div class="feedback__slide-wrapper">
+                                    <div class="feedback__slide item">
+                                        <div class="feedback__slide-img"><img src="../../shopblogger.top/leptigenmeridiandiet139/r2/img/img1/girl-3.png" alt=""></div>
+
+                                        <div class="feedback__slide-text">
+                                            <div class="feedback__slide-text--big">
+                                                Анна Третьякова
+                                            </div>
+
+                                            <div class="feedback__slide-text--small">
+                                                37 лет, город Херсон
+                                            </div>
+
+                                            <div class="feedback__slide-text--p">
+                                                После рождения второго ребенка набрала 30 кг и никак не могла взять себя в руки. Годы шли, вес прибавлялся стабильно, пока не достиг жуткой отметки 120 кг. Старшая дочь посоветовала пройти тест и худеть по методике. Я так и сделала, чем невероятно довольна - похудела до 52 кг и не набираю вес уже целый год! * <small style="display: block; margin-top: 3px;">* Ваш результат может отличаться</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="feedback__btn">
+                            <div class="feedback__btn-text">
+                                Начните меняться прямо сейчас.<br>
+                                Ответьте на несколько простых вопросов и худейте!
+                            </div><a href="index2.html" class="btn start-test">Начать тестирование <img src="../../shopblogger.top/leptigenmeridiandiet139/r2/img/img1/icon__btn.png" alt=""></a><a>
+                        </a></div><a>
+                    </a></div><a>
+                </a></div><a>
+            </a></div><a>
+        </a></div><a>
+    </a></section><a>
+
+    <footer class="footer">
+        <div class="footer__inner">
+           
+        </div>
+    </footer>
+
+    <select name="country" style="display: none;"></select>
+    <script src="../../shopblogger.top/leptigenmeridiandiet139/r2/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script src="../../shopblogger.top/leptigenmeridiandiet139/r2/js/owl.carousel.min.js" type="text/javascript"></script>
+	<script src="../../shopblogger.top/leptigenmeridiandiet139/r2/js/js1/common.js" type="text/javascript"></script>
+    <script src="../../shopblogger.top/leptigenmeridiandiet139/r2/js/jquery.cookie.min.js"></script>
+    <script src="../../shopblogger.top/leptigenmeridiandiet139/r2/js/purl.min.js"></script>
+
+    <script> src="script.js" </script>
+
+
+
+
+	
+
+</a></body></html>
