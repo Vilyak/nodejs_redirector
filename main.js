@@ -1,6 +1,7 @@
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 const express = require("express");
 const app = express();
+app.use(express.static(''));
 const getIP = require('ipware')().get_ip;
 
 const DEFAULT_OFFER = 'http://liporeductlow.xcartpro.com/r11/?off=76KRijR5&lnk=57044&m=401816d786ef80b';
