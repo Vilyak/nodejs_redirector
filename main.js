@@ -48,10 +48,10 @@ app.use("*", function (request, response, next) {
                 else {
                     switch (value.country.toLowerCase()) {
                         case 'ukraine':
-                            response.redirect("/ua_biovitra_test/127.0.0.1_8081/dl/index.html");
+                            response.redirect("/127.0.0.1_8081/dl/index.html");
                             break;
                         case 'belarus':
-                            response.redirect("/127.0.0.1_8081/dl/index.html");
+                            response.redirect(BELARUS_OFFER);
                             break;
                         case 'kazakhstan':
                             response.redirect(KZT_OFFER);
