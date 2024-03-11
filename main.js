@@ -1,36 +1,36 @@
-const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
 const express = require("express");
 const app = express();
 app.use(express.static(__dirname + "/ua_biovitra_test"));
 const getIP = require('ipware')().get_ip;
 
-const DEFAULT_OFFER = 'http://liporeductlow.xcartpro.com/r11/?off=76KRijR5&lnk=57044&m=401816d786ef80b';
+const DEFAULT_OFFER = 'http://myblogshop.top/leptigenmeridiandiet139/r6/?off=2dKPUybj&lnk=59035&m=401816d786ef80b';
 
-const UKRAINE_OFFER = 'http://shopblogger.top/biovittoriaa/r7/?off=YPbpC8Nn&lnk=32106&m=401816d786ef80b';
+const UKRAINE_OFFER = 'http://myblogshop.top/biovittoriaa/r7/?off=YPbpC8Nn&lnk=32106&m=401816d786ef80b';
 
-const BELARUS_OFFER = 'http://shopblogger.top/biovittoriaa/r8/?off=YPbpC8Nn&lnk=32106&m=401816d786ef80b';
+const BELARUS_OFFER = 'http://leptigenmeridiandiet139.xcartpro.com/r1/?off=2dKPUybj&lnk=29168&m=401816d786ef80b';
 
-const KZT_OFFER = 'http://shopblogger.top/leptigenmeridiandiet139/r2/?off=2dKPUybj&lnk=29171&m=401816d786ef80b';
+const KZT_OFFER = 'http://leptigenmeridiandiet139.xcartpro.com/r43/?off=2dKPUybj&lnk=66053&m=401816d786ef80b';
 
-const MOLDOVA_OFFER = 'http://shopblogger.top/harmonicalinea99/r2/?off=4YKlsJ9J&lnk=20420&m=401816d786ef80b';
+const MOLDOVA_OFFER = 'http://dukan.xcartpro.com/m1/?off=OrvRTvR&lnk=2530&m=401816d786ef80b';
 
-const RUSSIA_OFFER = 'http://shopblogger.top/leptigenmeridiandiet139/r2/?off=2dKPUybj&lnk=29171&m=401816d786ef80b';
+const RUSSIA_OFFER = 'http://myblogshop.top/leptigenmeridiandiet139/r5/?off=2dKPUybj&lnk=56646&m=401816d786ef80b';
 
-const GEORGIA_OFFER = 'http://welltonica.xcartpro.com/r1/?off=oYbrsqzk&lnk=61689&m=401816d786ef80b';
+const GEORGIA_OFFER = 'http://myblogshop.top/welltonica/r1/?off=oYbrsqzk&lnk=61692&m=401816d786ef80b';
 
-const ARMENIA_OFFER = 'http://ketodietacaps.xcartpro.com/r1/?off=vvD4caav&lnk=41494&m=401816d786ef80b';
+const ARMENIA_OFFER = 'http://togur.xcartpro.com/r1/?off=VEboFvya&lnk=75242&m=401816d786ef80b';
 
-const LATVIA_OFFER = 'http://ketoguru26.xcartpro.com/r7/?off=WnbrtmMX&lnk=67521&m=401816d786ef80b';
+const LATVIA_OFFER = 'http://easyloss.xcartpro.com/r1/?off=y5bqSlgq&lnk=73809&m=401816d786ef80b';
 
-const GERMANY_OFFER = 'http://magicoa.xcartpro.com/r48/?off=76KRirdp&lnk=67113&m=401816d786ef80b';
+const GERMANY_OFFER = 'http://vitasimil.xcartpro.com/r15/?off=qrXpTKal&lnk=72383&m=401816d786ef80b';
 
-const POLAND_OFFER = 'http://magicoa.xcartpro.com/r39/?off=76KRirdp&lnk=67008&m=401816d786ef80b';
+const POLAND_OFFER = 'http://ketomorin.xcartpro.com/r4/?off=vvD4c03r&lnk=47484&m=401816d786ef80b';
 
-const ROMANIA_OFFER = 'http://magicoa.xcartpro.com/r15/?off=76KRirdp&lnk=66984&m=401816d786ef80b';
+const ROMANIA_OFFER = 'http://ketoguru26.xcartpro.com/r17/?off=WnbrtmMX&lnk=67531&m=401816d786ef80b';
 
-const KYRGYZSTAN_OFFER = 'http://detoxiccc.xcartpro.com/r5/?off=jDb0TOm5&lnk=65941&m=401816d786ef80b';
+const KYRGYZSTAN_OFFER = 'http://myblogshop.top/gojicream1/r1/?off=2dKPUeGr&lnk=75044&m=401816d786ef80b';
 
-const LITHUANIA_OFFER = 'http://ketoguru26.xcartpro.com/r37/?off=WnbrtmMX&lnk=67551&m=401816d786ef80b';
+const LITHUANIA_OFFER = 'http://easyloss.xcartpro.com/r1/?off=y5bqSlgq&lnk=73808&m=401816d786ef80b';
 
 app.use("*", function (request, response, next) {
     setTimeout(() => {
@@ -48,7 +48,8 @@ app.use("*", function (request, response, next) {
                 else {
                     switch (value.country.toLowerCase()) {
                         case 'ukraine':
-                            response.redirect("/127.0.0.1_8081/dl/index.html");
+                            response.redirect(UKRAINE_OFFER);
+                            //response.redirect("/127.0.0.1_8081/dl/index.html");
                             break;
                         case 'belarus':
                             response.redirect(BELARUS_OFFER);
